@@ -2198,3 +2198,730 @@ img,
     }
 
 }
+/*==============================================================
+                    HOW IT WORKS
+==============================================================*/
+
+.how-it-works{
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-background);
+
+}
+
+.steps-container{
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 35px;
+
+    margin-top: 70px;
+
+    z-index: 2;
+
+}
+
+.timeline-line{
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    margin-top: 140px;
+
+    width: min(72%,900px);
+
+    height: 4px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+
+    opacity: .12;
+
+    border-radius: 50px;
+
+}
+/*==============================================================
+                    STEP CARDS
+==============================================================*/
+
+.step-card{
+
+    position: relative;
+
+    background: var(--color-card);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 28px;
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+
+    overflow: hidden;
+
+}
+
+.step-card:hover{
+
+    transform: translateY(-10px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+.step-number{
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 22px;
+
+    font-size: 3rem;
+
+    font-weight: 800;
+
+    font-family: var(--title-font);
+
+    color: rgba(47,94,30,.08);
+
+}
+
+.step-icon{
+
+    margin: 0 auto 30px;
+
+}
+
+.step-card h3{
+
+    margin-bottom: 18px;
+
+}
+
+.step-card p{
+
+    line-height: 1.8;
+
+}
+/*==============================================================
+                    EXTRA CARDS
+==============================================================*/
+
+.how-extra{
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 30px;
+
+    margin-top: 70px;
+
+}
+
+.extra-card{
+
+    padding: 35px;
+
+    background: var(--color-card);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    transition: var(--transition);
+
+}
+
+.extra-card:hover{
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+.extra-card i{
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: auto;
+
+    margin-bottom: 22px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary-soft);
+
+    color: var(--color-primary);
+
+    font-size: 1.5rem;
+
+}
+
+.extra-card h4{
+
+    margin-bottom: 12px;
+
+}
+/*==============================================================
+                DECORACIÓN
+==============================================================*/
+
+.how-it-works::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(47,94,30,.05);
+
+    filter:blur(90px);
+
+    top:-180px;
+
+    right:-140px;
+
+}
+
+.how-it-works::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    border-radius:50%;
+
+    background:rgba(47,94,30,.05);
+
+    filter:blur(70px);
+
+    bottom:-120px;
+
+    left:-120px;
+
+}
+
+
+/*==============================================================
+                    RESPONSIVE
+==============================================================*/
+
+@media(max-width:992px){
+
+    .steps-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .how-extra{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .timeline-line{
+
+        display:none;
+
+    }
+
+}
+/*==============================================================
+                        CATEGORIES
+==============================================================*/
+
+.categories{
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--color-background);
+
+}
+
+.categories-grid{
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 30px;
+
+    margin-top: 70px;
+
+}
+/*==============================================================
+                    CATEGORY CARD
+==============================================================*/
+
+.category-card{
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--color-border);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+
+    cursor: pointer;
+
+}
+
+.category-card:hover{
+
+    transform: translateY(-12px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+/*==============================================================
+                    IMAGEN
+==============================================================*/
+
+.category-image{
+
+    overflow: hidden;
+
+    height: 220px;
+
+}
+
+.category-image img{
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .6s;
+
+}
+
+.category-card:hover img{
+
+    transform: scale(1.08);
+
+}
+/*==============================================================
+                    CONTENIDO
+==============================================================*/
+
+.category-content{
+
+    padding: 28px;
+
+}
+
+.category-content h3{
+
+    margin-bottom: 12px;
+
+}
+
+.category-content p{
+
+    margin-bottom: 22px;
+
+    line-height: 1.7;
+
+}
+
+.category-content span{
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--color-primary);
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.category-card:hover span{
+
+    gap: 16px;
+
+}
+/*==============================================================
+                    RESPONSIVE
+==============================================================*/
+
+@media(max-width:1200px){
+
+    .categories-grid{
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .categories-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/*==============================================================
+                        BENEFITS
+==============================================================*/
+
+.benefits{
+
+    background: var(--color-background);
+
+    position: relative;
+
+}
+
+.benefits-grid{
+
+    margin-top: 70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.benefit-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid var(--color-border);
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.benefit-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+/*==============================================================
+                    BENEFIT IMAGE
+==============================================================*/
+
+.benefit-image{
+
+    height:260px;
+
+    overflow:hidden;
+
+}
+
+.benefit-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.benefit-card:hover img{
+
+    transform:scale(1.08);
+
+}
+/*==============================================================
+                    BENEFIT CONTENT
+==============================================================*/
+
+.benefit-card h3{
+
+    margin:28px 28px 15px;
+
+}
+
+.benefit-card p{
+
+    margin:0 28px 30px;
+
+    line-height:1.8;
+
+}
+/*==============================================================
+                    RESPONSIVE
+==============================================================*/
+
+@media(max-width:992px){
+
+    .benefits-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/*==============================================================
+                        IMPACT
+==============================================================*/
+
+.impact{
+
+    background:#fff;
+
+    position:relative;
+
+}
+
+.impact-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.impact-content h2{
+
+    margin:25px 0;
+
+}
+
+.impact-content p{
+
+    margin-bottom:25px;
+
+}
+
+.impact-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.impact-image img{
+
+    width:100%;
+
+    max-width:520px;
+
+}
+/*==============================================================
+                    IMPACT LIST
+==============================================================*/
+
+.impact-list{
+
+    margin-top:35px;
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.impact-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.impact-item i{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--color-primary-soft);
+
+    color:var(--color-primary);
+
+}
+/*==============================================================
+                    RESPONSIVE
+==============================================================*/
+
+@media(max-width:992px){
+
+    .impact-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/*==============================================================
+                        COMMUNITY
+==============================================================*/
+
+.community{
+
+    background:var(--color-background);
+
+    position:relative;
+
+}
+
+.community-grid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+/*==============================================================
+                    COMMUNITY CARD
+==============================================================*/
+
+.community-card{
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:white;
+
+    border:1px solid var(--color-border);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.community-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.community-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.community-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.community-content{
+
+    padding:28px;
+
+}
+
+.community-content h3{
+
+    margin-bottom:15px;
+
+}
+/*==============================================================
+                    RESPONSIVE
+==============================================================*/
+
+@media(max-width:992px){
+
+    .community-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
